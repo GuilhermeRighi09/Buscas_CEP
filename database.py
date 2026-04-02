@@ -23,6 +23,7 @@ def get_connection():
                 channel_binding="os.getenv(DB_CHANNEL_BINDING)"
             )
             return conn
+
     except Exception as ex:
         print(f'Erro ao conectar ao banco de dados: {ex}')
         return None
