@@ -21,7 +21,8 @@ def get_connection():
                 password=os.getenv('DB_PASSWORD'),
                 sslmode='disable',
                 channel_binding="os.getenv(DB_CHANNEL_BINDING)"
-        )
+            )
+            return conn
     except Exception as ex:
         print(f'Erro ao conectar ao banco de dados: {ex}')
         return None
